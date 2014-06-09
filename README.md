@@ -5,11 +5,11 @@ ssm-dupl-send
 The command first run the apelclient executable. Then, by using rsync, it duplicates the record messages to a second location in the filesystem
 two instances of the ssmsend command are then used to publish the messages to two different message brokers.
 
-** CONFIGURATION: **
+### CONFIGURATION:
 
 Three configuration files are involved:
 
-* /etc/apel/client.cfg *
+#### /etc/apel/client.cfg
 
 This is the config file for the command that joins the information collected by apelparser into a mysql database and generates the record messages.
 in this file is mandatory to set:
@@ -26,12 +26,12 @@ All the other parameters should be set following the apel documentation.
 This Change in the conf file tells the apel client to not directly instantiate the ssmsend executable right after finishing its job. 
 Thus allowing us to duplicate them.
 
-* /etc/apel/sender.cfg *
+#### /etc/apel/sender.cfg
 
 This is the configuration file used by ssmsend to publish the records to the EGI brokers following the standard route. Should be set 
 following the apel documantation
 
-* /etc/apel/faust-sender.cfg *
+#### /etc/apel/faust-sender.cfg
 
 This is the configuration file used by ssmsend to publish the 2nd copy of the records to the local broker Should be configured as follow:
 
