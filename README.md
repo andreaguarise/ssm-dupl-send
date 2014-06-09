@@ -85,3 +85,25 @@ logfile: /var/log/apel/ssmsend-faust.log			<-- NOTE THIS
 level: INFO
 console: true
 ````
+
+### Running the script
+
+````
+ssm-dupl-send.sh -h
+ Usage: ssm-dupl-send.sh [OPTIONS]
+ 
+Duplicates messages created by apelclient before sending them through ssmsend
+
+ OPTIONS:
+        -c, --apelclient     cmd-path        the apelclient executable [/usr/bin/apelclient]
+        -C, --apelclientconf apel-config     the apelclient config file [/etc/apel/client.cfg]
+        -s, --ssmsend        cmd-path        the ssmsend executable [/usr/bin/ssmsend]
+        -S, --ssmsendconf    ssm-apel-conf   ssm config file pointing to EGI broker [/etc/apel/sender.cfg]
+        -F, --ssmfaustconf   ssm-faust-conf  ssm config file pointing to local broker [/etc/apel/sender.cfg]
+        -d, --apeldir        path            standard apel message location [/var/spool/apel/outgoing]
+        -D, --faustdir       path            directory used to store local copies of messages [/var/spool/faust/outgoing]
+        -h, --help                           this help.
+````
+
+When the command is executed without any option, the default values are used as specified in the square braces.
+Please note that the two directories must be created before running the script. The script will complain if it founds that the direcctory do not exists. 
