@@ -14,8 +14,10 @@ Three configuration files are involved:
 This is the config file for the command that joins the information collected by apelparser into a mysql database and generates the record messages.
 in this file is mandatory to set:
 
+````
 [ssm]
 enabled = false
+````
 
 The default is 'true', so pay attention to change it!
 
@@ -33,7 +35,8 @@ following the apel documantation
 
 This is the configuration file used by ssmsend to publish the 2nd copy of the records to the local broker Should be configured as follow:
 
- ################################################################################
+````
+################################################################################
 # Required: broker configuration options
 #
 
@@ -81,4 +84,4 @@ logfile: /var/log/apel/ssmsend-faust.log			<-- NOTE THIS
 # DEBUG, INFO, WARN, ERROR, CRITICAL
 level: INFO
 console: true
-
+````
