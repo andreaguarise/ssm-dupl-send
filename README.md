@@ -106,4 +106,5 @@ Duplicates messages created by apelclient before sending them through ssmsend
 ````
 
 When the command is executed without any option, the default values are used as specified in the square braces.
-Please note that the two directories must be created before running the script. The script will complain if it founds that the direcctory do not exists. 
+**Please note that the two directories containing the messages (by default: /var/spool/apel/outgoing  and /var/spool/faust/outgoing) must be created before running the script.** 
+The script will exit and complain if it founds that the directory do not exist. 
