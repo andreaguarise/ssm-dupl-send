@@ -64,7 +64,7 @@ key: /etc/grid-security/hostkey.pem
 capath: /etc/grid-security/certificates
 # If this is supplied, outgoing messages will be encrypted
 # using this certificate
-#server_cert: /etc/grid-security/servercert.pem      <-- NOTE: THIS IS COMMENTED
+#server_cert: /etc/grid-security/servercert.pem   <-- NOTE: THIS MUST BE COMMENTED
 
 
 ################################################################################
